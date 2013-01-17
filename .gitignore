@@ -1,0 +1,10 @@
+#DotDotDot
+DotDotDot.exe
+DotDotDot.ini
+
+# Mercurial
+.hg/
+
+#Sublime
+*.sublime-project
+*.sublime-workspace

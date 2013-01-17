@@ -1,4 +1,4 @@
 DotDotDot
 =========
 
-My Frankenstein AutoHotkey script.
+Frankenstein AutoHotkey script of pure awesome.
