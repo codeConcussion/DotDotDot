@@ -2,7 +2,7 @@ CapsLock & a::return
 CapsLock & n::Send ^+-
 CapsLock & b::Send ^-
 CapsLock & r::Send {F2}
-CapsLock & s::Send {F5}
+CapsLock & s::Refresh()
 CapsLock & q::Send {F10}
 CapsLock & w::Send {F11}
 CapsLock & e::Send {F12}
@@ -285,4 +285,11 @@ Paste() {
         Send {Home 2}+{End}
         
     Send ^v
+}
+
+Refresh() {
+    if IsKeyDown("LAlt")
+        Send +{F5}
+    else
+        Send {F5}
 }

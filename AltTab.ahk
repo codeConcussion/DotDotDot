@@ -26,7 +26,7 @@ Aspire() {
     else {
         Run % "d:\dev\aspire\client\bin\debug\leaseTeam.client.exe"
         WinWait, Sign in to ASPIRE
-        WinActivate        
+        WinActivate
     }
 
     if WinActive("Sign in to ASPIRE") {
