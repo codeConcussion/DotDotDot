@@ -9,6 +9,7 @@
 #]::Run % GetEnvironmentVariable("DropBox") . "\apps\notepad2\notepad2.exe"
 #[::Run % GetEnvironmentVariable("SystemRoot") . "\notepad.exe"
 #+\::SendTo(1)
+#+,::SendTo(1)
 #+]::SendTo(2)
 #+[::SendTo(3)
 #+'::SendTo(4)
