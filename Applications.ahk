@@ -1,9 +1,9 @@
 ^F1::Send {F1}
 *F1::return
 #t::Send ^t
-#,::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office14\excel.exe /e"
-#.::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office14\winword.exe /q"
-#/::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office14\outlook.exe /recycle"
+#,::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office15\excel.exe /e"
+#.::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office15\winword.exe /q"
+#/::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office15\outlook.exe /recycle"
 #'::Run % GetEnvironmentVariable("DropBox") . "\apps\beyond compare 3\bcompare.exe"
 #\::Run % GetEnvironmentVariable("DropBox") . "\apps\sublime\sublime_text.exe"
 #]::Run % GetEnvironmentVariable("DropBox") . "\apps\notepad2\notepad2.exe"

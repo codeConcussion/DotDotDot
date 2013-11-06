@@ -13,13 +13,18 @@ IniRead, userId, DotDotDot.ini, Phrases, UserId
 Send %userId%
 return
 
+::;dev::
+IniRead, dev, DotDotDot.ini, Phrases, Dev
+Send %dev%
+return
+
 ::;up::
 IniRead, profile, DotDotDot.ini, Phrases, Profile
 Send %profile%
 return
 
 ::;email::
-IniRead, email, DotDotDot.ini, Phrases, Email 
+IniRead, email, DotDotDot.ini, Phrases, Email
 Send %email%
 return
 
