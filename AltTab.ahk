@@ -4,7 +4,7 @@ RAlt & .::Send ^{Tab}
 RAlt & m::Send ^+{Tab}
 
 RAlt & a::Aspire()
-RAlt & k::FindRun("ahk_class VirtualConsoleClass", GetEnvironmentVariable("DropBox") . "\apps\conemu\conemu64.exe")
+RAlt & k::FindRun("ahk_class VirtualConsoleClass", GetEnvironmentVariable("DropBox") . "\apps\cmder\cmder.exe")
 RAlt & i::FindRun("Microsoft Visual Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft visual studio 12.0\common7\ide\devenv.exe")
 RAlt & ,::FindRun("Sublime Text 2", GetEnvironmentVariable("Dropbox") . "\apps\sublime\sublime_text.exe")
 RAlt & u::FindRun("Microsoft SQL Server Management Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft sql server\110\tools\binn\managementstudio\ssms.exe")
