@@ -15,12 +15,12 @@
 #+'::SendTo(4)
 #=::Send #+=
 #-::Send #+-
-#NumpadMult::Send {Media_Play_Pause}
+#NumpadMult::SendMediaKey("{Media_Play_Pause}")
 #NumpadDiv::Send {Volume_Mute}
 #NumpadAdd::Send {Volume_Up}
 #NumpadSub::Send {Volume_Down}
-#+NumpadAdd::Send {Media_Next}
-#+NumpadSub::Send {Media_Prev}
+#+NumpadAdd::SendMediaKey("{Media_Next}")
+#+NumpadSub::SendMediaKey("{Media_Prev}")
 
 ;chrome
 #IfWinActive ahk_class Chrome_WidgetWin_0
@@ -48,11 +48,6 @@
     ^k::^n
 #IfWinActive
 
-;aspire
-#IfWinActive ASPIRE
-    ^w::^F4
-    ^p::^q
-#IfWinActive
 
 GetEnvironmentVariable(environmentVariable) {
     EnvGet, value, %environmentVariable%
@@ -63,6 +58,14 @@ RunActivate(executable, title) {
     Run, %executable%
     WinWait, %title%
     WinActivate, %title%
+}
+
+SendMediaKey(key) {
+    if WinExist("ahk_class WinylWnd") {
+        WinActivate
+        Send %key%
+        Send !{Escape}
+    }
 }
 
 SendTo(number) {
