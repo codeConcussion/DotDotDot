@@ -6,11 +6,13 @@
 #/::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office15\outlook.exe /recycle"
 #'::Run % GetEnvironmentVariable("DropBox") . "\apps\beyond compare 3\bcompare.exe"
 #\::Run % GetEnvironmentVariable("DropBox") . "\apps\sublime\sublime_text.exe"
-#]::Run % GetEnvironmentVariable("DropBox") . "\apps\notepad2\notepad2.exe"
-#[::Run % GetEnvironmentVariable("SystemRoot") . "\notepad.exe"
+#]::Run % GetEnvironmentVariable("DropBox") . "\apps\atom\app-1.0.0.0\atom.exe"
+#[::Run % GetEnvironmentVariable("DropBox") . "\apps\notepad2\notepad2.exe"
+;#[::Run % GetEnvironmentVariable("SystemRoot") . "\notepad.exe"
 #+\::SendTo(1)
 #+,::SendTo(1)
 #+]::SendTo(2)
+#+c::SendTo(2)
 #+[::SendTo(3)
 #+'::SendTo(4)
 #=::Send #+=

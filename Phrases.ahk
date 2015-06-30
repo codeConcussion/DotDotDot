@@ -1,6 +1,36 @@
+::;address::
+IniRead, address, DotDotDot.ini, Phrases, Address
+Send %address%
+return
+
+::;city::
+IniRead, city, DotDotDot.ini, Phrases, City
+Send %city%
+return
+
+::;email::
+IniRead, email, DotDotDot.ini, Phrases, Email
+Send %email%
+return
+
+::;gmail::
+IniRead, gmail, DotDotDot.ini, Phrases, Gmail
+Send %gmail%
+return
+
 ::;lt::
 IniRead, company, DotDotDot.ini, Phrases, Company
 Send %company%
+return
+
+::;lti::
+IniRead, fullCompany, DotDotDot.ini, Phrases, FullCompany
+Send %fullCompany%
+return
+
+::;profile::
+IniRead, profile, DotDotDot.ini, Phrases, Profile
+Send %profile%
 return
 
 ::;tk::
@@ -13,20 +43,13 @@ IniRead, userId, DotDotDot.ini, Phrases, UserId
 Send %userId%
 return
 
-::;dev::
-IniRead, dev, DotDotDot.ini, Phrases, Dev
-Send %dev%
+::;zip::
+IniRead, zip, DotDotDot.ini, Phrases, Zip
+Send %zip%
 return
 
-::;up::
-IniRead, profile, DotDotDot.ini, Phrases, Profile
-Send %profile%
-return
 
-::;email::
-IniRead, email, DotDotDot.ini, Phrases, Email
-Send %email%
-return
+;Sql hotstrings
 
 ::;ii::INSERT INTO
 
