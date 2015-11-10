@@ -68,7 +68,7 @@ RunActivate(executable, title) {
 }
 
 SendMediaKey(key) {
-    if WinExist("ahk_class WinylWnd") {
+    if WinExist("ahk_exe MusicBee.exe") {
         WinActivate
         Send %key%
         Send !{Escape}
