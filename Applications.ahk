@@ -1,12 +1,13 @@
 ^F1::Send {F1}
 *F1::return
 #t::Send ^t
-#,::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office15\excel.exe /e"
-#.::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office15\winword.exe /q"
-#/::Run % GetEnvironmentVariable("ProgramFiles") . "\microsoft office\office15\outlook.exe /recycle"
+#,::Run % GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft office\root\office16\excel.exe /e"
+#.::Run % GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft office\root\office16\winword.exe /q"
+#/::Run % GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft office\root\office16\outlook.exe /recycle"
 #'::Run % GetEnvironmentVariable("DropBox") . "\apps\beyond compare 3\bcompare.exe"
-#\::Run % GetEnvironmentVariable("DropBox") . "\apps\sublime\sublime_text.exe"
-#]::Run % GetEnvironmentVariable("DropBox") . "\apps\atom\app-1.0.0.0\atom.exe"
+#\::Run % GetEnvironmentVariable("LocalAppData") . "\atom\update.exe --processStart atom.exe"
+;#]::Run % GetEnvironmentVariable("DropBox") . "\apps\sublime\sublime_text.exe"
+#]::Run % GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft vs code\code.exe"
 #[::Run % GetEnvironmentVariable("DropBox") . "\apps\notepad2\notepad2.exe"
 ;#[::Run % GetEnvironmentVariable("SystemRoot") . "\notepad.exe"
 #+\::SendTo(1)
@@ -24,9 +25,14 @@
 #+NumpadAdd::SendMediaKey("{Media_Next}")
 #+NumpadSub::SendMediaKey("{Media_Prev}")
 
-;chrome
-#IfWinActive ahk_class Chrome_WidgetWin_0
-    ^i::^f
+;aspire
+#IfWinActive ahk_exe LeaseTeam.Client.exe
+    ^w::Send ^{F4}
+#IfWinActive
+
+;linqpad
+#IfWinActive LINQPad
+    ^w::Send ^{F4}
 #IfWinActive
 
 ;management studio
@@ -34,14 +40,9 @@
     F4::return
     F10::return
     F11::return
-    ^w::^F4
+    ^w::Send ^{F4}
     +!l::Send {F8}
     !Enter::Send, {AppsKey}y
-#IfWinActive
-
-;linqpad
-#IfWinActive LINQPad 4
-    ^w::^F4
 #IfWinActive
 
 ;beyond compare
@@ -54,6 +55,10 @@
 GetEnvironmentVariable(environmentVariable) {
     EnvGet, value, %environmentVariable%
     return %value%
+}
+
+IsKeyDown(key) {
+    return GetKeyState(key, "P")
 }
 
 RunActivate(executable, title) {
