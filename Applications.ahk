@@ -18,16 +18,11 @@
 #+'::SendTo(4)
 #=::Send #+=
 #-::Send #+-
-#NumpadMult::SendMediaKey("{Media_Play_Pause}")
-#NumpadDiv::Send {Volume_Mute}
-#NumpadAdd::Send {Volume_Up}
-#NumpadSub::Send {Volume_Down}
-#+NumpadAdd::SendMediaKey("{Media_Next}")
-#+NumpadSub::SendMediaKey("{Media_Prev}")
 
 ;aspire
 #IfWinActive ahk_exe LeaseTeam.Client.exe
     ^w::Send ^{F4}
+    ^p::^q
 #IfWinActive
 
 ;linqpad
@@ -57,22 +52,10 @@ GetEnvironmentVariable(environmentVariable) {
     return %value%
 }
 
-IsKeyDown(key) {
-    return GetKeyState(key, "P")
-}
-
 RunActivate(executable, title) {
     Run, %executable%
     WinWait, %title%
     WinActivate, %title%
-}
-
-SendMediaKey(key) {
-    if WinExist("ahk_exe MusicBee.exe") {
-        WinActivate
-        Send %key%
-        Send !{Escape}
-    }
 }
 
 SendTo(number) {
