@@ -22,7 +22,7 @@ FindRun(find, launch) {
 }
 
 Aspire() {
-    if WinExist("ASPIRE") {
+    if WinExist("ahk_exe leaseteam.client.exe") {
         WinActivate
     }
     else {

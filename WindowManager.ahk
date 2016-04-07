@@ -374,7 +374,7 @@ GetAdjacentPosition(relationToCurrent) {
 }
 
 GetCurrentWindowOffsets(ByRef xOffset, ByRef yOffset) {
-    ;get window position offsets since windows 10
+    ;get window position offsets since dwm.exe messes with positioning
     ;copied from http://autohotkey.com/boards/viewtopic.php?f=6&t=3392
 
     static dwmWindow
