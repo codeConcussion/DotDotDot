@@ -1,5 +1,3 @@
-^F1::Send {F1}
-*F1::return
 #t::Send ^t
 #,::Run % GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft office\root\office16\excel.exe /e"
 #.::Run % GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft office\root\office16\winword.exe /q"

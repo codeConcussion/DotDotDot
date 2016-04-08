@@ -45,6 +45,8 @@ Left() {
         Send +{Left}
     else if IsKeyDown("RAlt")
         Send !+{Left}
+    else if IsKeyDown("LShift")
+        Move()
     else if IsKeyDown("RShift")
         Send {Left 8}
     else if IsKeyDown("A")
@@ -60,6 +62,8 @@ Right() {
         Send +{Right}
     else if IsKeyDown("RAlt")
         Send !+{Right}
+    else if IsKeyDown("LShift")
+        Move()
     else if IsKeyDown("RShift")
         Send {Right 8}
     else if IsKeyDown("A")
@@ -75,6 +79,8 @@ Up() {
         Send +{Up}
     else if IsKeyDown("RAlt")
         Send !+{Up}
+    else if IsKeyDown("LShift")
+        Move()
     else if IsKeyDown("RShift")
         Send {Up 8}
     else if IsKeyDown("A")
@@ -90,6 +96,8 @@ Down() {
         Send +{Down}
     else if IsKeyDown("RAlt")
         Send !+{Down}
+    else if IsKeyDown("LShift")
+        Move()
     else if IsKeyDown("RShift")
         Send {Down 8}
     else if IsKeyDown("A")
@@ -103,6 +111,8 @@ Home() {
         Send +{Home}
     else if IsKeyDown("RAlt")
         Send !+{Home}
+    else if IsKeyDown("LShift")
+        MoveToPreviousMonitor()
     else if IsKeyDown("A")
         Send 7
     else
@@ -114,6 +124,8 @@ End() {
         Send +{End}
     else if IsKeyDown("RAlt")
         Send !+{End}
+    else if IsKeyDown("LShift")
+        MoveToNextMonitor()
     else if IsKeyDown("A")
         Send 9
     else
@@ -134,6 +146,8 @@ PageDown() {
         Send +{PgDn}
     else if IsKeyDown("RAlt")
         Send !+{PgDn}
+    else if IsKeyDown("LShift")
+        Minimize()
     else
         Send {PgDn}
 }
@@ -183,6 +197,8 @@ ControlHome() {
         Send ^+{Home}
     else if IsKeyDown("RAlt")
         Send ^!+{Home}
+    else if IsKeyDown("LShift")
+        MaximizeRestore()
     else if IsKeyDown("A")
         Send /
     else
@@ -194,6 +210,8 @@ ControlEnd() {
         Send ^+{End}
     else if IsKeyDown("RAlt")
         Send ^!+{End}
+    else if IsKeyDown("LShift")
+        Move()
     else if IsKeyDown("A")
         Send 2
     else
