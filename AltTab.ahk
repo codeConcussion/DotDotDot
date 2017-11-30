@@ -4,13 +4,12 @@ RAlt & .::Send ^{Tab}
 RAlt & m::Send ^+{Tab}
 
 RAlt & a::Aspire()
-RAlt & c::FindRun("ahk_exe code.exe", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft vs code\code.exe")
+RAlt & c::FindRun("ahk_exe code.exe", GetEnvironmentVariable("ProgramFiles") . "\microsoft vs code\code.exe")
 RAlt & k::FindRun("ahk_class VirtualConsoleClass", GetEnvironmentVariable("DropBox") . "\apps\conemu\conemu64.exe")
-RAlt & i::FindRun("Microsoft Visual Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft visual studio 14.0\common7\ide\devenv.exe")
-RAlt & ,::FindRun("ahk_exe atom.exe", GetEnvironmentVariable("LocalAppData") . "\atom\update.exe --processStart atom.exe")
-RAlt & u::FindRun("Microsoft SQL Server Management Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft sql server\120\tools\binn\managementstudio\ssms.exe")
+RAlt & i::FindRun("Microsoft Visual Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft visual studio\2017\enterprise\common7\ide\devenv.exe")
+RAlt & u::FindRun("Microsoft SQL Server Management Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft sql server\140\tools\binn\managementstudio\ssms.exe")
 RAlt & o::FindRun("LINQPad", GetEnvironmentVariable("Dropbox") . "\apps\linqpad\linqpad.exe")
-RAlt & Space::FindRun("ahk_exe chrome.exe", GetEnvironmentVariable("ProgramFiles(x86)") . "\google\chrome\application\chrome.exe")
+RAlt & ,::FindRun("ahk_exe chrome.exe", GetEnvironmentVariable("ProgramFiles(x86)") . "\google\chrome\application\chrome.exe")
 
 FindRun(find, launch) {
     if WinExist(find) {
