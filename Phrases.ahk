@@ -43,6 +43,10 @@ IniRead, userId, DotDotDot.ini, Phrases, UserId
 Send %userId%
 return
 
+::;vn::
+Send C:\Dev\vNext
+return
+
 ::;zip::
 IniRead, zip, DotDotDot.ini, Phrases, Zip
 Send %zip%

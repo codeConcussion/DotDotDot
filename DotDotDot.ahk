@@ -1,6 +1,7 @@
 #NoEnv
-#SingleInstance
+#SingleInstance force
 #KeyHistory 0
+Menu, Tray, Icon, DotDotDot.ico
 SendMode Input
 SetCapsLockState, AlwaysOff
 SetNumLockState, AlwaysOn
@@ -9,8 +10,7 @@ SetTitleMatchMode 2
 
 #Include WindowManager.ahk
 #Include Applications.ahk
-#Include Media.ahk
 #Include AltTab.ahk
 #Include CapsModifier.ahk
 #Include Phrases.ahk
-#Include Startup.ahk
+#Include ResetModifiers.ahk
