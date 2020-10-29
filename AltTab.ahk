@@ -5,9 +5,9 @@ RAlt & m::Send ^+{Tab}
 
 RAlt & a::Aspire()
 RAlt & c::FindRun("ahk_exe code.exe", GetEnvironmentVariable("LocalAppData") . "\programs\microsoft vs code\code.exe")
-RAlt & k::FindRun("ahk_class VirtualConsoleClass", GetEnvironmentVariable("DropBox") . "\apps\conemu\conemu64.exe")
+RAlt & k::FindRun("ahk_exe WindowsTerminal.exe", "C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_0.5.2681.0_x64__8wekyb3d8bbwe\WindowsTerminal.exe")
 RAlt & i::FindRun("Microsoft Visual Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft visual studio\2017\enterprise\common7\ide\devenv.exe")
-RAlt & u::FindRun("Microsoft SQL Server Management Studio", GetEnvironmentVariable("ProgramFiles(x86)") . "\microsoft sql server\140\tools\binn\managementstudio\ssms.exe")
+RAlt & u::FindRun("Azure Data Studio", GetEnvironmentVariable("LocalAppData") . "\Programs\Azure Data Studio\azuredatastudio.exe")
 RAlt & o::FindRun("LINQPad", GetEnvironmentVariable("Dropbox") . "\apps\linqpad\linqpad.exe")
 RAlt & ,::FindRun("ahk_exe chrome.exe", GetEnvironmentVariable("ProgramFiles(x86)") . "\google\chrome\application\chrome.exe")
 

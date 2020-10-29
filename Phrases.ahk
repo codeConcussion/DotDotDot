@@ -44,7 +44,7 @@ Send %userId%
 return
 
 ::;vn::
-Send C:\Dev\vNext
+Send C:\Dev\Cloud
 return
 
 ::;zip::
@@ -55,32 +55,23 @@ return
 
 ;Sql hotstrings
 
-::;ii::INSERT INTO
+::;conn::
+Send Data Source=.;Initial Catalog=;Integrated Security=False;Uid=sa;Pwd=tyson;
+return
 
-::;l::
-Send LIKE '`%`%'{Space}
-Send {Left 3}
+::;pgconn::
+Send Host=localhost;Database=environment;Username=postgres;Password=@spireTest1;Port=5432;
+return
+
+::;pgf::
+Send CREATE OR REPLACE FUNCTION pg_temp.foo(){Enter}RETURNS SETOF ?{Enter}LANGUAGE plpgsql{Enter}AS $${Enter}DECLARE{Enter 2}BEGIN{Enter}RETURN QUERY ?{Enter}END $$;{Enter 2}SELECT * FROM pg_temp.foo();{Up 3}{Home}{Space 4}
 return
 
 ::;ssf::
 Send SELECT * FROM{Space}
 return
 
-::;stf::
-Send SELECT TOP 100 * FROM{Space}
-return
-
-::;ssfw::
-Send SELECT * FROM  WHERE{Space}
-Send {Left 7}
-return
-
 ::;sf::
 Send SELECT  FROM{Space}
 Send {Left 6}
-return
-
-::;sfw::
-Send SELECT  FROM  WHERE{Space}
-Send {Left 13}
 return
