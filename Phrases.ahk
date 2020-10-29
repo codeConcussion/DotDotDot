@@ -60,7 +60,8 @@ Send Data Source=.;Initial Catalog=;Integrated Security=False;Uid=sa;Pwd=tyson;
 return
 
 ::;pgconn::
-Send Host=localhost;Database=environment;Username=postgres;Password=@spireTest1;Port=5432;
+IniRead, databasePassword, DotDotDot.ini, Phrases, DatabasePassword
+Send Host=localhost;Database=environment;Username=postgres;Password=%databasePassword%;Port=5432;
 return
 
 ::;pgf::
