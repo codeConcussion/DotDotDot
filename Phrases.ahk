@@ -65,7 +65,7 @@ Send Host=localhost;Database=environment;Username=postgres;Password=%databasePas
 return
 
 ::;pgf::
-Send CREATE OR REPLACE FUNCTION pg_temp.foo(){Enter}RETURNS SETOF ?{Enter}LANGUAGE plpgsql{Enter}AS $${Enter}DECLARE{Enter 2}BEGIN{Enter}RETURN QUERY ?{Enter}END $$;{Enter 2}SELECT * FROM pg_temp.foo();{Up 3}{Home}{Space 4}
+Send CREATE OR REPLACE FUNCTION pg_temp.foo(){Enter}RETURNS SETOF ?{Enter}LANGUAGE plpgsql{Enter}AS $${Enter}DECLARE{Enter 2}BEGIN{Enter}RETURN QUERY {Enter}END $$;{Enter 2}SELECT * FROM pg_temp.foo();{Up 3}{Home}{Space 4}{End}
 return
 
 ::;ssf::
